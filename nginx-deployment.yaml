@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata: 
+  name: webapp1
+spec: 
+  replicas: 4
+  template: 
+    metadata: 
+      labels: 
+        app: webapp1
+    spec: 
+      containers: 
+        - 
+          image: prithiviraj123/nginxnew
+          name: webapp1
+          ports: 
+            - 
+              containerPort: 80
